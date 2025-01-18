@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Home",
+    "link": "/",
+    "icon": "fa6-solid:house-user"
+  },
+  {
+    "title": "Clients",
+    "link": "/clients",
+    "icon":  "fa6-solid:user"
+  },
+  {
+    "title": "Chats",
+    "link": "/chat",
+    "icon":  "fa6-solid:comment-dots"
+  }
+]
