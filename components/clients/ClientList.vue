@@ -2,6 +2,7 @@
 import Nodata from "~/components/Nodata.vue";
 
 const {clients} = storeToRefs(useClientStore());
+
 </script>
 
 <template>

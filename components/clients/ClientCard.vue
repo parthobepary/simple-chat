@@ -18,8 +18,8 @@ const {deleteClient} = useClientStore();
         <h1 class="font-bold">{{ client?.name }}</h1>
         <p>{{ client?.role }}</p>
       </div>
-      <button @click="deleteClient(client.id)">
-        <Icon class="text-red-600" name="fa6-solid:trash-can" />
+      <button :disabled="client?.id === 1" @click="deleteClient(client.id)">
+        <Icon class="text-red-600" name="fa6-solid:trash-can"/>
       </button>
     </div>
   </div>

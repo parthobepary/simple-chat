@@ -1,8 +1,7 @@
 import type {Client} from "~/interface/fake";
-import {getData, setData} from "~/composables/useFetch";
 
-export const useClientStore = defineStore('client', async () => {
-    const clients = ref<Client[] | undefined>([getData('clients') as Client]);
+export const useClientStore = defineStore('client', () => {
+    const clients = ref<Client[]>(getData('clients') as Client[]);
     const name = ref<string>('');
     const roles = ref<string[]>([
         'Admin',
@@ -10,18 +9,15 @@ export const useClientStore = defineStore('client', async () => {
         'Guest'
     ]);
     const role = ref<string>(roles.value[0]);
-
-    const createClient = () => {
+    const createClient = async () => {
         clients.value?.push(makeClient(name.value, role.value));
-        setData('clients', JSON.stringify(clients.value));
+        await setData('clients', JSON.stringify(clients.value));
         name.value = '';
     }
-
-    const deleteClient = (id: number) => {
+    const deleteClient = async (id: number) => {
         clients.value = clients.value?.filter(client => client.id !== id);
+        await setData('clients', JSON.stringify(clients.value));
     }
-
-
     const makeClient = (name: string, role: string): Client => {
         return {
             id: clients.value?.length ? clients.value.length + 1 : 1,
@@ -29,7 +25,5 @@ export const useClientStore = defineStore('client', async () => {
             role
         }
     }
-
-
     return {name, role, clients, roles, createClient, deleteClient};
 });
