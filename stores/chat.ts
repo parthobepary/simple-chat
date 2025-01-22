@@ -1,14 +1,15 @@
 import type {Message, Client} from "~/interface/fake";
 
 export const useChatStore = defineStore('chat', () => {
-    const messages = ref<Message[]>([]);
+    const messages = ref<Message[]>(getData('messages') as Message[]);
     const {clients} = storeToRefs(useClientStore());
     const message = ref<string>('');
     const userId = ref<number>(1);
 
-    const sendMessage = () => {
+    const sendMessage = async () => {
         if (message.value) {
             messages.value?.push(makeMessage(message.value, userId.value));
+            await setData('messages', JSON.stringify(messages.value));
             message.value = '';
         }
     };
