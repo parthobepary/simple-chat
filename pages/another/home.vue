@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 </script>
 
 <template>
@@ -7,7 +6,3 @@
     <slot/>
   </div>
 </template>
-
-<style scoped>
-
-</style>

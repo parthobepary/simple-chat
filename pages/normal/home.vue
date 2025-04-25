@@ -1,13 +1,9 @@
 <script setup lang="ts">
-
+import Banner from "~/components/another/Banner.vue";
 </script>
 
 <template>
   <div class="container mx-auto h-screen">
-    <slot/>
+    <Banner />
   </div>
 </template>
-
-<style scoped>
-
-</style>
