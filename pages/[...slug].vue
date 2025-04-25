@@ -8,9 +8,7 @@ const page = route.params.slug?.[0] || 'home'
 
 const PageComponent = ref<null | any>(null)
 
-onMounted(async () => {
-  PageComponent.value = useThemePageComponent(page)
-})
+PageComponent.value = useThemePageComponent(page)
 </script>
 
 <template>

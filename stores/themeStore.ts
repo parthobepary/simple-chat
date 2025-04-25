@@ -17,8 +17,10 @@ export const useThemeStore = defineStore('themeStore', () => {
         }
 
         // Apply theme colors to the document
-        document.documentElement.style.setProperty('--primary-color', themeData.value.primary_color)
-        document.documentElement.style.setProperty('--secondary-color', themeData.value.secondary_color)
+        if (process.client) {
+            document.documentElement.style.setProperty('--primary-color', theme.primary_color)
+            document.documentElement.style.setProperty('--secondary-color', theme.secondary_color)
+        }
     }
 
     return {currentTheme, themeData, setTheme}

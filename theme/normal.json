@@ -4,8 +4,8 @@
     "home",
     "about"
   ],
-  "primary_color": "#3498db",
-  "secondary_color": "#2ecc71",
+  "primary_color": "black",
+  "secondary_color": "white",
   "facebook": "https://www.facebook.com/yourpage",
   "twitter": "https://twitter.com/yourprofile"
 }

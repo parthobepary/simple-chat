@@ -3,6 +3,6 @@
 
 <template>
   <div class="container mx-auto h-screen">
-    <slot/>
+    <LazyAnotherBanner />
   </div>
 </template>

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="container mx-auto h-screen">
+  <div class="bg-primary text-secondary">
     <slot/>
   </div>
 </template>

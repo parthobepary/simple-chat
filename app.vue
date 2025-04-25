@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const themeStore = useThemeStore()
-await themeStore.setTheme('Normal theme')
+await themeStore.setTheme('normal')
 </script>
 
 <template>
