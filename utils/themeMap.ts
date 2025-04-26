@@ -9,12 +9,11 @@ export const themeLayouts: Record<string, () => Promise<any>> = {
 export const themePages: Record<string, Record<string, () => Promise<any>>> = {
     theme1: {
         '/': () => import('~/themes/theme1/pages/index.vue'),
-        '/about': () => import('~/themes/theme1/pages/about.vue'),
-        '/contact': () => import('~/themes/theme1/pages/contact-us.vue'),
-        '/products': () => import('~/themes/theme1/pages/products/index.vue'),
-        '/products/:slug': () => import('~/themes/theme1/pages/products/[slug].vue'),
+        '/abouts': () => import('~/themes/theme1/pages/about.vue'),
+        '/contact': () => import('~/themes/theme1/pages/contact.vue'),
     },
     theme2: {
         '/': () => import('~/themes/theme2/pages/index.vue'),
+        '/contact': () => import('~/themes/theme2/pages/contact.vue'),
     },
 };

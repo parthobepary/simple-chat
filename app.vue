@@ -11,7 +11,7 @@ setTimeout(() => {
   loading.value = false;
 }, 20);
 
-setThemeColors('#e00f4e', '#e0f2fe');
+setThemeColors('gray', 'white');
 </script>
 
 <template>

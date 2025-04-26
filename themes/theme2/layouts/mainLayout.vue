@@ -1,11 +1,14 @@
 <template>
-  <div class="min-h-screen bg-white text-black">
-    <header class="bg-blue-600 text-white p-4">Theme one - Header</header>
-    <main class="p-4">
+  <div class="min-h-screen bg-secondary text-primary">
+    <!--   make a nav item left site logo and right site contact and product-->
+
+    <Header/>
+    <main class="p-4 min-h-[calc(100vh-100px)]">
       <slot/>
     </main>
-    <footer class="bg-gray-800 text-white p-4 mt-10">Theme one - Footer</footer>
+    <footer class="bg-primary text-secondary text-center p-4 mt-10">Theme two - Footer</footer>
   </div>
 </template>
 <script setup lang="ts">
+import Header from "~/themes/theme2/components/Header.vue";
 </script>

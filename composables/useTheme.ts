@@ -3,7 +3,7 @@ import {themeLayouts, themePages} from '~/utils/themeMap';
 
 export const useTheme = () => {
     const route = useRoute();
-    const theme = computed(() => (route.query.theme as string) || 'theme1');
+    const theme = computed(() => (route.query.theme as string) || 'theme2');
 
     const getPageKey = () => {
         return route.path;
