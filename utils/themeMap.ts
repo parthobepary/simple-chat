@@ -10,7 +10,7 @@ export const themePages: Record<string, Record<string, () => Promise<any>>> = {
     theme1: {
         '/': () => import('~/themes/theme1/pages/index.vue'),
         '/abouts': () => import('~/themes/theme1/pages/about.vue'),
-        '/contact': () => import('~/themes/theme1/pages/contact.vue'),
+        '/contact': () => import('~/themes/theme1/components/categories.vue'),
     },
     theme2: {
         '/': () => import('~/themes/theme2/pages/index.vue'),

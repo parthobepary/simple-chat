@@ -1,30 +1,30 @@
 <script setup>
-import {useTheme} from './composables/useTheme';
-import {useThemeColors} from '~/composables/useThemeColors';
+import { useTheme } from './composables/useTheme';
+import { useThemeColors } from '~/composables/useThemeColors';
+import { ref } from 'vue';
 
-const {loadLayout} = useTheme();
+const { loadLayout } = useTheme();
 const Layout = loadLayout();
-const {setThemeColors} = useThemeColors();
+const { setThemeColors } = useThemeColors();
 const loading = ref(true);
 
-const route = useRoute();
-console.log('route', route.query);
+// Set predefined colors
+const primaryColor = '#000000'; // Black
+const secondaryColor = '#F69600'; // Orange
+
+// Set theme colors
+setThemeColors(primaryColor, secondaryColor);
 
 setTimeout(() => {
   loading.value = false;
 }, 20);
-
-
-console.log(route.query.primary)
-
-setThemeColors(`#${route.query.primary}`, `#${route.query.secondary}`);
 </script>
 
 <template>
   <nuxt-layout>
-    <!--    <LazyLoadingScreen v-if="loading"/>-->
+    <!-- <LazyLoadingScreen v-if="loading"/> -->
     <component :is="Layout">
-      <NuxtPage/>
+      <NuxtPage />
     </component>
   </nuxt-layout>
 </template>

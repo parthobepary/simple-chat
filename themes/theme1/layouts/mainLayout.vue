@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-primary text-black">
+  <div class="min-h-screen bg-white text-black">
     <Header/>
     <main class="p-4 min-h-[calc(100vh-10rem)]">
       <slot/>
