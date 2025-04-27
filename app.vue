@@ -7,16 +7,22 @@ const Layout = loadLayout();
 const {setThemeColors} = useThemeColors();
 const loading = ref(true);
 
+const route = useRoute();
+console.log('route', route.query);
+
 setTimeout(() => {
   loading.value = false;
 }, 20);
 
-setThemeColors('gray', 'white');
+
+console.log(route.query.primary)
+
+setThemeColors(`#${route.query.primary}`, `#${route.query.secondary}`);
 </script>
 
 <template>
   <nuxt-layout>
-    <LazyLoadingScreen v-if="loading"/>
+    <!--    <LazyLoadingScreen v-if="loading"/>-->
     <component :is="Layout">
       <NuxtPage/>
     </component>
