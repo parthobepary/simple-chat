@@ -1,0 +1,38 @@
+{
+    "billing": {
+      "name": "জন Doe",
+      "phone": "017XXXXXXXX",
+      "address": "ঢাকা, বাংলাদেশ",
+      "email": "john.doe@example.com",
+      "notes": "পণ্য ডেলিভারির আগে কল করুন।"
+    },
+    "cartItems": [
+      {
+        "name": "দানাদার গাওয়া ঘি | Granular Gawa Ghee",
+        "size": "500 gm",
+        "quantity": 2,
+        "price": 700
+      },
+      {
+        "name": "দানাদার গাওয়া ঘি | Granular Gawa Ghee",
+        "size": "500 gm",
+        "quantity": 2,
+        "price": 700
+      }
+    ],
+    "shippingOptions": [
+      { "type": "Inside Dhaka", "cost": 80 },
+      { "type": "Outside Dhaka", "cost": 120 },
+      { "type": "Free", "cost": 0 }
+    ],
+    "coupons": [
+      { "code": "OTA400", "discount": 400, "description": "400 টাকা ডিসকাউন্ট অফার" }
+    ],
+    "paymentMethods": [
+      { "method": "Cash", "label": "Cash on delivery" },
+      { "method": "SSLCommerz", "label": "SSL Commerz" },
+      { "method": "Bkash", "label": "Bkash" }
+    ],
+    "orders": []
+  }
+  

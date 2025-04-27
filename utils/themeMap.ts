@@ -11,6 +11,7 @@ export const themePages: Record<string, Record<string, () => Promise<any>>> = {
         '/': () => import('~/themes/theme1/pages/index.vue'),
         '/abouts': () => import('~/themes/theme1/pages/about.vue'),
         '/contact': () => import('~/themes/theme1/pages/contact.vue'),
+        
     },
     theme2: {
         '/': () => import('~/themes/theme2/pages/index.vue'),
