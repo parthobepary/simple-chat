@@ -1,10 +1,13 @@
 <script setup lang="ts">
 
-import AboutSection from "~/themes/theme1/components/AboutSection.vue";
+import ProductCard from "~/themes/theme1/components/ProductCard.vue";
+
 </script>
 
 <template>
-  <AboutSection/>
+  <div>
+    <ProductCard />
+  </div>
 </template>
 
 <style scoped>
