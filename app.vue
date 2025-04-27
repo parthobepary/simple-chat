@@ -18,7 +18,7 @@ setTimeout(() => {
 console.log(route.query.primary)
 
 // setThemeColors(`#${route.query.primary}`, `#${route.query.secondary}`);
-setThemeColors('gray', 'cyan');
+setThemeColors('blue', 'green');
 </script>
 
 <template>

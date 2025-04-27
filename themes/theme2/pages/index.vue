@@ -7,9 +7,11 @@
 
     <!-- Hero Banner Section -->
     <section class="bg-primary text-secondary py-24">
-      <div class="max-w-6xl mx-auto px-6 text-center">
+      <div class="max-w-6xl mx-auto px-6 text-center bg-red-500">
+        <div :class="`bg-[var(--primary-300)] text-[var(--secondary-700)] p-4`">Primary 100</div>
+
         <h1 class="text-5xl font-bold mb-6">Welcome to Our Store</h1>
-        <p class="text-xl mb-8">Shop the best products at unbeatable prices!</p>
+        <p class="text-xl mb-8 bg-primary-900">Shop the best products at unbeatable prices!</p>
         <nuxt-link
             to="/products"
             class="inline-block bg-secondary text-primary font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition"

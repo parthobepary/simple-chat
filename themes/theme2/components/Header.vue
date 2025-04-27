@@ -14,7 +14,7 @@ watch(currentTheme, (newTheme) => {
         <nuxt-link to="/" class="text-secondary text-lg font-bold">Theme Two</nuxt-link>
       </div>
       <div class="flex space-x-4">
-        <nuxt-link to="/products" class="text-secondary hover:text-gray-300">Products</nuxt-link>
+        <nuxt-link to="/product" class="text-secondary hover:text-gray-300">Products</nuxt-link>
         <nuxt-link to="/contact" class="text-secondary hover:text-gray-300">Contact</nuxt-link>
       </div>
     </nav>
