@@ -15,5 +15,10 @@ export const themePages: Record<string, Record<string, () => Promise<any>>> = {
     theme2: {
         '/': () => import('~/themes/theme2/pages/index.vue'),
         '/contact': () => import('~/themes/theme2/pages/contact.vue'),
+
+        //     register here a dynamic route [id].vue
+        'product': () => import('~/themes/theme2/pages/product/index.vue'),
+        'product/:id': () => import('~/themes/theme2/pages/product/[id].vue')
+
     },
 };

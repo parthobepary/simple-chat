@@ -14,9 +14,33 @@ export const useTheme = () => {
     };
 
     const loadPage = () => {
-        const pageKey = getPageKey();
+        const pageKey = getPageKey(); // Example: /product/2
         const themePageMap = themePages[theme.value];
-        const loader = themePageMap?.[pageKey];
+
+        if (!themePageMap) {
+            console.warn(`Theme ${theme.value} not found.`);
+            throw createError({statusCode: 404, statusMessage: 'Theme Not Found'});
+        }
+
+        // Try exact match first
+        let loader = themePageMap[pageKey];
+
+        // If not exact, try dynamic match
+        if (!loader) {
+            for (const routePattern in themePageMap) {
+                // Convert pattern 'product/:id' to regex
+                const regexPattern = '^' + routePattern.replace(/:[^/]+/g, '[^/]+') + '$';
+                const regex = new RegExp(regexPattern);
+
+                // Remove leading slash if needed
+                const normalizedPath = pageKey.startsWith('/') ? pageKey.slice(1) : pageKey;
+
+                if (regex.test(normalizedPath)) {
+                    loader = themePageMap[routePattern];
+                    break;
+                }
+            }
+        }
 
         if (!loader) {
             console.warn(`Page not found for ${pageKey} in theme ${theme.value}`);
@@ -25,6 +49,7 @@ export const useTheme = () => {
 
         return defineAsyncComponent(loader);
     };
+
 
     return {theme, loadLayout, loadPage};
 };
